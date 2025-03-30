@@ -4,3 +4,6 @@ pycryptodome==3.21.0
 PyJWT==2.10.1
 pymongo==4.11.2
 python-dotenv==1.0.1
+django-cors-headers==4.7.0
+djangorestframework-simplejwt==5.5.0
+dnspython==2.7.0

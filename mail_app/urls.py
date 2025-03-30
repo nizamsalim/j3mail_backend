@@ -1,5 +1,8 @@
 from django.urls import path
-from .views import ProtectedTest
+from .views import Mail, MailList, ReadMail
+
 urlpatterns = [
-    path("protected/",ProtectedTest.as_view(),name="Protected")
+    path("send/", Mail.as_view(), name="Mail"),
+    path("list/", MailList.as_view(), name="MailList"),
+    path("read/", ReadMail.as_view(), name="ReadMail"),
 ]
