@@ -104,8 +104,9 @@ class Signup(APIView):
                 key="access_token",
                 value=access_token,
                 httponly=True,
-                secure=False,
+                secure=True,
                 max_age=3600 * 24,
+                samesite="None"
             )
             return response
         except Exception as e:
@@ -143,7 +144,8 @@ class Login(APIView):
                 key="access_token",
                 value=access_token,
                 httponly=True,
-                secure=False,
+                secure=True,
+                samesite='None',
                 max_age=3600 * 24,
             )
             return response
