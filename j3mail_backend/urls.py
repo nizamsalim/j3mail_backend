@@ -16,8 +16,23 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from rest_framework.views import APIView
+from rest_framework.response import Response
+
+class HomeView(APIView):
+    permission_classes = []
+    authentication_classes = []
+    def get(self,req):
+        return Response({
+            "Application Link":"https://j3mail.vercel.app",
+            "Github":{
+                "Frontend":"https://github.com/nizamsalim/j3mail_frontend",
+                "Backend":"https://github.com/nizamsalim/j3mail_backend",
+            }
+        })
 
 urlpatterns = [
+    path("",HomeView.as_view(),name="Home"),
     path('admin/', admin.site.urls),
     path("auth/",include("auth_app.urls")),
     path("mail/",include("mail_app.urls"))
