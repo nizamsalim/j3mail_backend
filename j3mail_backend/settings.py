@@ -25,6 +25,8 @@ PUBLIC_KEY = os.getenv("PUBLIC_KEY").replace("\\n", "\n")
 PRIVATE_KEY = os.getenv("PRIVATE_KEY").replace("\\n", "\n")
 # print(PRIVATE_KEY)
 
+ALLOWED_HOSTS = ["j3mail-backend.onrender.com","localhost","127.0.0.1"]
+
 
 # Quick-start development settings - unsuitabe for prdoduction
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
