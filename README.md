@@ -6,7 +6,7 @@ The backend is built with **Django**, **Django Rest Framework**, and **MongoDB**
 
 ## 🔗 Application
 
-[J3Mail]()
+[J3Mail](https://j3mail.vercel.app/)
 
 ## Frontend Repository
 
