@@ -97,7 +97,7 @@ WSGI_APPLICATION = "j3mail_backend.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-MONGODB_URI = "mongodb+srv://root:root@cluster0.vlnsk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+MONGODB_URI = os.getenv("MONGODB_URI")
 MONGODB_NAME = "email_database"
 
 # DATABASES = {
